@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>筆順ビューア</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<main class="sheet">
+  <p class="eyebrow">書 写</p>
+  <h1>筆順ビューア</h1>
+
+  <div class="entry">
+    <input id="text" type="text" value="妻" maxlength="12" autocomplete="off" spellcheck="false">
+    <button id="show" class="primary">表示する</button>
+  </div>
+  <p class="hint">熟語を入れると1文字ずつ切り替えられます。</p>
+
+  <div id="tabs" class="tabs"></div>
+
+  <div class="grid">
+    <div class="rule-h"></div>
+    <div class="rule-v"></div>
+    <div id="stage"></div>
+    <canvas id="canvas" width="600" height="600" hidden></canvas>
+    <p id="fallback" class="fallback" hidden></p>
+  </div>
+
+  <div class="controls">
+    <button id="play" class="primary">再生</button>
+    <button id="step">1画進む</button>
+    <button id="trace">なぞる</button>
+    <button id="clear">最初へ</button>
+  </div>
+
+  <div class="meta">
+    <button id="speed" class="link">速さ：ふつう</button>
+    <span id="status"></span>
+  </div>
+
+  <p class="note">筆順データはKanjiVG（CC BY-SA 3.0）を使用しています。</p>
+</main>
+
+<script src="./app.js"></script>
+</body>
+</html>
